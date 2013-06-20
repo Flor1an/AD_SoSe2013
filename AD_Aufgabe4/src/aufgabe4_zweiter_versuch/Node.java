@@ -20,18 +20,6 @@ public class Node {
 	
 
 	public String toInorderString() {
-//		String inorder = "";
-//		if (leftNode != null) {
-//			inorder += leftNode.toInorderString() +" ";
-//		}
-//
-//		inorder += value;
-//
-//		if (rightNode != null) {
-//			inorder += " "+ rightNode.toInorderString();
-//		}
-//		
-//		return inorder;
 
 		if (leftNode == null && rightNode == null) {
 			return String.valueOf(value) + "(" + height + ")";
