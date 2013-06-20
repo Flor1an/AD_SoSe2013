@@ -1,6 +1,9 @@
 package aufgabe4;
 
 import java.awt.EventQueue;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import aufgabe4.adt.*;
 import aufgabe4.helper.*;
@@ -8,82 +11,46 @@ import aufgabe4.helper.*;
 public class Starter {
 	public static void main(String[] args) {
 		
-//		Filereader fr = new Filereader("zzahlen.dat");
+		Random r = new Random();
+
+		Filereader fr = new Filereader("zzahlen.dat");
+		List<Integer> eingefuegteZahlen = new ArrayList<>();
+		
+		Baum t = new Baum();
+		//In Baum einfügen:
+		for (Integer elem : fr.getEingeleseneFolge()) {
+			t.elementEinfuegen(elem);
+			eingefuegteZahlen.add(elem);
+		}
+		
+		System.out.println("\n" + t + "\n");
+		
+		//25 Zahlen aus Baum Löschen
+		for (int i = 0; i < 25; i++) {
+			Integer zuLoeschen= eingefuegteZahlen.get(r.nextInt(eingefuegteZahlen.size())); 
+			
+			t.elementLoeschen(zuLoeschen);
+			eingefuegteZahlen.remove(zuLoeschen);
+		}
+//		t.elementLoeschen(157);
+//		t.elementLoeschen(74);
+		
+		System.out.println("\n" + t + "\n");
+
+		
+//#################################
 //		Baum t = new Baum();
-//		for (Integer elem : fr.getEingeleseneFolge()) {
-//			t.elementEinfuegen(elem);
-//		}
-//		System.out.println(t);
-		
-		
-		
-		 Baum avl = new Baum();
-
-//		 avl.elementEinfuegen(50);
-//		 avl.elementEinfuegen(70);
-//		 avl.elementEinfuegen(30);
-//		 avl.elementEinfuegen(60);
-//		 avl.elementEinfuegen(40);
-//		 avl.elementEinfuegen(80);
-//		 avl.elementEinfuegen(20);
-		 
-//		 avl.elementEinfuegen(5);
-		 //avl.elementEinfuegen(15);
-//		 avl.elementEinfuegen(35);
-		 
-		// avl.elementEinfuegen(25);
-//		 avl.elementEinfuegen(35);
-		 
-//		 avl.elementEinfuegen(15);
-//		 avl.elementEinfuegen(12);
-//		 avl.elementEinfuegen(16);
-		 
-//		 
-//		 
-//		 avl.elementEinfuegen(5);
-//		 avl.elementEinfuegen(15);
-//		 
-//		 
-//		  avl.elementEinfuegen(2);
-//		 avl.elementEinfuegen(6);
-//		 
-//		 avl.elementEinfuegen(12);
-//		 avl.elementEinfuegen(17);
-		 
-		 avl.elementEinfuegen(50);
-		 avl.elementEinfuegen(60);
-		 
-		 avl.elementEinfuegen(30);
-		 avl.elementEinfuegen(20);
-		 avl.elementEinfuegen(40);
-		 
-		 System.out.println("\n" + avl);
-		 avl.elementLoeschen(60);
-//		 avl.elementLoeschen(20);
-//		 avl.elementLoeschen(40);
-//		 avl.elementLoeschen(30);
-//		 
-//		 System.out.println("\n" + avl);
-//		 avl.elementLoeschen(25);
-		 
-		 System.out.println("\n" + avl);
-
-	
-
-		//draw(t.getWurzel());
-	
+//
+//		t.elementEinfuegen(50);
+//		t.elementEinfuegen(40);
+//t.elementEinfuegen(20);
+////		t.elementEinfuegen(70);
+//
+//t.elementEinfuegen(10);System.out.println("\n" + t);
+//t.elementEinfuegen(5);
+//
+//		System.out.println("\n" + t);
 
 	}
 
-//	public static void draw(Knoten k) {
-//		try {
-//			System.err.println("\t"+k.getContent());
-//			System.err.println();
-//			
-//			draw(k.getLinkerSohn());
-//			draw(k.getRechterSohn());
-//		} catch (Exception e) {
-//			// TODO: handle exception
-//		}
-//	}
 }

@@ -1,7 +1,7 @@
 package aufgabe4.adt;
 
 public class Knoten {
-	private int content;
+	private Integer content;
 	private Knoten linkerSohn;
 	private Knoten rechterSohn;
 	private Knoten vaterKnoten;
@@ -57,10 +57,23 @@ public class Knoten {
 	}
 
 	public String toString() {
-		return " [" + getLinkerSohn() + "<" + getContent() + ">"
-				+ getRechterSohn() + "] ";
+		return " [" + getLinkerSohn() + "<" + getContent() + ">" 	+ getRechterSohn() + "] ";	
+	}
+	
+	public String toInOrderString() {
+		String l="";
+		try {
+			l=getLinkerSohn().toInOrderString();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		String r="";
+		try {
+			r=getRechterSohn().toInOrderString();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
-
-		
+		return l + " " + getContent() + " " + r ;	
 	}
 }
