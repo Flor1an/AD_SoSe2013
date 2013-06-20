@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0065)http://users.informatik.haw-hamburg.de/~klauck/AlguDat/aufg4.html -->
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">  <meta name="GENERATOR" content="Mozilla/4.78 [en] (Win98; U) [Netscape]"><title>Aufgabe 4</title><!-- file: Tutorial.html rmi10 author: T. Graf history: 20. March 1998 - file creation - graf --><!-- ----------------------------------------------------------------- --> <script language="JavaScript">
+function frage(antwort)
+{
+if ( antwort == "OnlineBank" )
+{
+alert("Richtig, die Klasse, welche die Remote Methoden anbietet muß mit dem rmic kompiliert werden!");
+}
+else
+{
+alert ("Leider falsch");
+}
+}
+</script><style type="text/css"></style></head>
+<body style="background-color: rgb(255, 255, 255); direction: ltr;"><h1>
+<font face="Arial,Helvetica">Aufgabe 4: Rekursion<br>
+</font></h1><font face="Arial,Helvetica">In
+dieser Aufgabe werden
+AVL-Bäume näher beleuchtet. Zudem wird sich
+näher mit der Rekursion befasst.</font><font face="Arial"><b><br>
+</b></font><h2><font face="Arial"><b>Aufgabenstellung</b></font></h2>
+<font face="Arial">Sei </font><tt>zahlen</tt><font face="Arial">
+eine endliche Folge von ganzen positiven Zufallszahlen gegeben, die in
+einen&nbsp; AVL-Baum einzufügen</font><font face="Arial">
+sind. <br>
+<br></font><font face="Arial"><b>Implementieren
+</b>Sie
+nun folgende Teile:<br>
+</font><ol> <li><tt>AVLBaum</tt><font face="Arial">
+als <b>höhenbalancierten binären Suchbaum</b></font><font face="Arial">:</font><font face="Arial">
+Implementieren Sie den ADT <b>AVL-Baum</b> gemäss
+der Definition aus der Vorlesung</font><font face="Arial">.
+Implementieren Sie die beiden Operationen </font><tt>einfuegen</tt><font face="Arial"> und </font><tt>loeschen</tt><font face="Arial">.<b> </b>Implementieren Sie zudem
+die benötigten Rotationen </font><tt>LinksRotation</tt><font face="Arial">, </font><tt>RechtsRotation</tt><font face="Arial">, </font><tt>DoppeltLinksRotation</tt><font face="Arial">, </font><tt>DoppeltRechtsRotation</tt><font face="Arial">.</font></li><li><font face="Arial">Beachten
+Sie: wegen den zufällig erzeugten Schlüsseln sollten Sie davon
+ausgehen, dass gleiche Schlüssel vorkommen. Beim löschen müssen Sie
+dann darauf achten, dass ggf. Sie auf den maximalen bzw. minimalen Wert
+in einem der Teilbäume den direkten Verweis haben, um diesen löschen zu
+können! Sonst kann es bei gleichen Schlüsseln zu Fehlern kommen, wenn
+man den zugehörigen Wert nur sucht!<b> <br>
+</b></font></li><li><font face="Arial">Erweitern Sie den ADT so,
+dass die Anzahl der jeweiligen Rotationen gezählt werden.<b> <br>
+</b></font></li> <li><font face="Arial">Implementieren
+Sie eine
+Ausleseoperationen, die
+den Baum in geeigneter Art und Weise ausgibt inklusive der beim Aufbau
+gezählten Rotationen und in einer Datei </font><a href="http://users.informatik.haw-hamburg.de/~klauck/AlguDat/avl.log"><span style="font-family: monospace;">avl.log</span></a><font face="Arial"> speichert. </font></li>
+</ol><font face="Arial">Die 256 Zufallszahlen sind
+aus einer
+Datei </font><a href="http://users.informatik.haw-hamburg.de/~klauck/AlguDat/zzahlen.dat"><tt>zzahlen.dat</tt></a><font face="Arial"> einzulesen.</font><font face="Arial">
+Der Baum ist danach auszugeben. Dann sind von diesen 256 Zufallszahlen
+25 zufällig ausgewählte zu löschen. Der Baum
+ist erneut
+auszugeben.<br>
+</font><font face="Arial"><br></font><font face="Arial"><b>Implementieren </b>Sie
+nun folgende Anwendungen:<br>
+</font><ol> <li><tt><font face="Arial">SummePost</font></tt><font face="Arial"> als <b>Postorder Addition</b></font><font face="Arial">:</font><font face="Arial">
+Implementieren Sie eine Methode, die die Summe der Schlüssel
+in
+einem gegebenen AVL-Baum in Postorderweise (Summe Linker Teilbaum +
+Summe Rechter Teilbaum + Knoten) bestimmt.&nbsp;</font></li>
+<li><tt><font face="Arial">SummePre</font></tt><font face="Arial"> als <b>Preorder Addition</b></font><font face="Arial">:</font><font face="Arial">
+Implementieren Sie eine Methode, die die Summe der Schlüssel
+in einem
+gegebenen AVL-Baum in Preorderweise (Knoten + </font><font face="Arial">Summe Linker Teilbaum + Summe Rechter Teilbaum</font><font face="Arial">) bestimmt.</font></li> <li><tt>controlSum</tt><font face="Arial">
+als normale Addition (zur Kontrolle) auf der Datei </font><tt>zahlen.dat</tt><font face="Arial">.<br> </font></li>
+</ol><span style="font-family: Helvetica,Arial,sans-serif;">Die
+Endsummen sind in der</span><span style="font-family: Helvetica,Arial,sans-serif;">&nbsp;Datei
+</span><font face="Arial"> </font><a href="http://users.informatik.haw-hamburg.de/~klauck/AlguDat/avl.log"><span style="font-family: monospace;">avl.log</span></a><font face="Arial">&nbsp;mit auszugeben</font><span style="font-family: Helvetica,Arial,sans-serif;">. Sofern
+Sie etwas darin geübt sind, eine GUI zu erstellen, sollten Sie sich den
+Baum z.B. als graphische Darstellung (</span><a href="http://users.informatik.haw-hamburg.de/~klauck/AlguDat/ausgabe.jpg"><span style="font-family: monospace;">AVL.jpg</span></a><span style="font-family: Helvetica,Arial,sans-serif;">) anzeigen
+lassen, da man dann ab einer bestimmten Grösse besser erkennen kann,
+was ggf. nicht korrekt implementiert wurde. </span><br><h2 style="font-family: Helvetica,Arial,sans-serif;">Abnahme<br>
+</h2><span style="font-family: Helvetica,Arial,sans-serif;">
+
+Da die Aufgaben des ADP sehr frühzeitig im WWW zur
+Verfügung stehen, wird die Abnahme stark auf eine </span><span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">vorbereitende Arbeit</span><span style="font-family: Helvetica,Arial,sans-serif;">
+aufgebaut.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+
+<span style="font-family: Helvetica,Arial,sans-serif;">
+
+
+&nbsp;</span><br style="font-family: Helvetica,Arial,sans-serif;">
+
+
+
+
+<span style="font-weight: bold; font-family: Helvetica,Arial,sans-serif;">Bis Montag Abend</span><span style="font-family: Helvetica,Arial,sans-serif;">
+vor Ihrem
+Praktikumstermin ist eine erste Skizze der Aufgabe
+als
+*.pdf Dokument (<a href="http://users.informatik.haw-hamburg.de/~klauck/AlguDat/PFormal.zip">Dokumentationskopf</a> nicht vergessen!) mir per E-Mail zuzusenden. Ggf.
+können offene Fragen mit gesendet
+werden.
+Die Skizze <span style="font-weight: bold;">muss</span> grob beschreiben, wie Sie sich die Realisierung
+denken. </span><span style="font-family: Helvetica,Arial,sans-serif;">Als
+erfolgreich wird eine Skizze bewertet, wenn Ihre Kenntnisse bzgl. der
+gestellten Aufgabe eine erfolgreiche Teilnahme an dem Praktikumstermin
+in Aussicht stellen.<br>&nbsp;<br>Am Tag des Praktikums findet nach dem Eingangstest eine
+Befragung von Teams statt. Die Befragung muss erfolgreich absolviert
+werden, um weiter am Praktikum teilnehmen zu können. Ist die Befragung
+nicht erfolgreich, gilt die Aufgabe als nicht erfolgreich bearbeitet.
+Als erfolgreich wird die Befragung bewertet, wenn Ihre Kenntnisse bzgl.
+der gestellten Aufgabe zumindest ausreichend sind. Dazu gehört
+insbesodnere eine ausreichende Kenntnis über Ihren Code (und nicht die
+Kenntnis über den Kommentar im Code).<br><br></span><span style="font-weight: bold; color: rgb(255, 0, 0); font-family: Helvetica,Arial,sans-serif;">Abgabe</span><span style="font-family: Helvetica,Arial,sans-serif;">:</span><span style="font-family: Helvetica,Arial,sans-serif;">&nbsp;Unmittelbar
+am Ende des Praktikums ist von allen Teams der Code abzugeben. Zu dem
+Code gehören die Sourcedateien, die ggf. erzeugten&nbsp; *.log etc.
+Dateien, die während der Tests erzeugt wurden, und eine Readme.txt
+Datei, in der ausführlich beschrieben wird, wie die Software zu starten
+ist! Zudem ist der aktuelle Dokumentationskopf abzugeben. Die Abgabe gehört zu den PVL-Bedingungen und ist einzuhalten,
+terminlich wie auch inhaltlich!<br><br>Wird eine Aufgabe nicht
+erfolgreich bearbeitet gilt die PVL als nicht bestanden. Damit eine
+Aufgabe als erfolgreich gewertet wird, müssen die Skizze, die Befragung
+sowie die Abgabe als erfolgreich gewertet werden. Alle gesetzten
+Termine sind einzuhalten.</span><span style="font-family: Helvetica,Arial,sans-serif;"><span style="font-family: Helvetica,Arial,sans-serif;"></span><br>
+<br><br>
+<br><!-- BEGINN GOWEB WEBCOUNTER -->
+<p></p><center><a href="http://www.webcounter.goweb.de/"><img src="./Aufgabe 4_files/12337.GIF" alt="gratis Counter by GOWEB" border="0" vspace="0"></a><br>
+<a href="http://www.webcounter.goweb.de/"><font color="#4c4c4c" size="-2">Gratis Counter by GOWEB</font></a>
+</center><!-- ENDE GOWEB WEBCOUNTER -->
+</span></body></html>

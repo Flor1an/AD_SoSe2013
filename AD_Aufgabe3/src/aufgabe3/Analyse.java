@@ -20,9 +20,9 @@ public class Analyse {
     private static int ANAZAHL_BAENDER_STEP = 2;
     private static int ANAZAHL_BAENDER_MAX = 10;
 
-    private static int ANAZAHL_ZAHLEN_MIN = 10;
-    private static int ANAZAHL_ZAHLEN_STEP = 10;
-    private static int ANAZAHL_ZAHLEN_MAX = 100;
+    private static int ANAZAHL_ZAHLEN_MIN = 1000;
+    private static int ANAZAHL_ZAHLEN_STEP = 1000;
+    private static int ANAZAHL_ZAHLEN_MAX = 5000;
 
     private static int INITIALE_RUNLAENGE_MIN = 3;
     private static int INITIALE_RUNLAENGE_STEP = 3;

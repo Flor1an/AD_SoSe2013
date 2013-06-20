@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		FileSystem csv = new FileSystem("maxteilsummeTest.csv");
-		csv.write("Anzahl;Algorithmus;maxTeilsumme;Index1;Index2;Zeit (inkl. Z��hlen);Zeit (exkl. Z��hlen);Summe aller Zugriffe\n");
+		csv.write("Anzahl;Algorithmus;maxTeilsumme;Index1;Index2;Zeit (inkl. Zaehlen);Zeit (exkl. Zaehlen);Summe aller Zugriffe\n");
 		
 		for(int i=100; i<=1000; i=i+100){
 			

@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 	
 	private static int ANAZAHL_BAENDER = 2;
-	private static int ANAZAHL_ZAHLEN = 50;
+	private static int ANAZAHL_ZAHLEN = 10000;
 	private static int INITIALE_RUNLAENGE = 6;
 
     /*

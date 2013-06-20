@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Algorithmus {
 
-    /*
+    /**
     * Instanzvariablen
     * - runLength = i (default start value 3)
     * - tapes = Array mit allen Bändern (default start value 4)
@@ -15,7 +15,7 @@ public class Algorithmus {
     private Tape[] tapes;
     private Boolean debug;
 
-    /*
+    /**
     * Konstruktor (Cascade)
     * */
     public Algorithmus(){
@@ -25,7 +25,7 @@ public class Algorithmus {
         this.debug = false;
         this.tapes = new Tape[tapesAmount*2];
         for(int i=0; i<tapesAmount*2; i++){
-            this.tapes[i] = new Tape("C:\\Users\\Florian\\Dropbox\\Eclipse Workspace\\AD_Aufgabe2\\files\\"+i);
+            this.tapes[i] = new Tape(""+i);
             this.tapes[i].reset();
         }
     }
@@ -34,7 +34,7 @@ public class Algorithmus {
         return this.debug = debug;
     }
 
-    /*
+    /**
     * Methode zum starten der Sortierung
     * */
     public void sort(int runLength){
@@ -119,7 +119,7 @@ public class Algorithmus {
         }
     }
 
-    /*
+    /**
     * Methode zum sortieren eines Bandes
     * */
     private void sortRun(Integer inputTapeID, Integer inputTapeOffset, Integer outputTapeID, Integer outputTapeOffset, Integer runLength){
@@ -213,7 +213,7 @@ public class Algorithmus {
     }
 
 
-    /*
+    /**
     * Rückgabe aller Bänder als String Repräsentation
     * */
     public String toString(){
@@ -224,7 +224,7 @@ public class Algorithmus {
         return s;
     }
 
-    /*
+    /**
     * Helper Methoden zur Ausgabe auf der Konsole
     * */
     private void p(Object ... args){

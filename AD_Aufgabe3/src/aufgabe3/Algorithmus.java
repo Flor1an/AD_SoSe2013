@@ -1,7 +1,5 @@
 package aufgabe3;
 
-import aufgabe3.Tape;
-
 public class Algorithmus {
 
     /**

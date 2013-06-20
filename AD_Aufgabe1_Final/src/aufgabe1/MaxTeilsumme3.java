@@ -16,8 +16,8 @@ public class MaxTeilsumme3 {
 					Benchmark.getInstance().index1(von);
 					Benchmark.getInstance().index2(bis);
 				}
-				maxSumme = Math.max(summe, maxSumme); // Summe ??berpr??fen, ob
-														// gr????er
+				maxSumme = Math.max(summe, maxSumme); // Summe ueberpruefen, ob
+														// groesser
 			}
 		return maxSumme;
 	}
@@ -30,7 +30,7 @@ public class MaxTeilsumme3 {
 				for (int i = von; i <= bis; i++) {
 					summe += folge[i];
 				}
-				maxSumme = Math.max(summe, maxSumme); // Summe ??berpr??fen, ob gr????er
+				maxSumme = Math.max(summe, maxSumme); // Summe ueberpruefen, ob grueoesser
 			}
 		return maxSumme;
 	}

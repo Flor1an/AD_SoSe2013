@@ -6,10 +6,10 @@ import java.io.*;
 public class TestTape {
     public static void main(String[] args) throws IOException {
 
-        Tape t0 = new Tape("/tmp/t0");
-        Tape t1 = new Tape("/tmp/t1");
-        Tape t2 = new Tape("/tmp/t2");
-        Tape t3 = new Tape("/tmp/t3");
+        Tape t0 = new Tape("t0");
+        Tape t1 = new Tape("t1");
+        Tape t2 = new Tape("t2");
+        Tape t3 = new Tape("t3");
 
         for(int i=0; i<1000; i++){
             t0.write(i, i);

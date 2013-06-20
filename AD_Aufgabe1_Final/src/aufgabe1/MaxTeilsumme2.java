@@ -5,7 +5,7 @@ public class MaxTeilsumme2 {
 	int algorithmus(final int[] folge) {
 		
 		int[][] s = new int[folge.length][folge.length];
-		// Tabelle f??r Teilsummen: f??r (i,j) gilt
+		// Tabelle fuer Teilsummen: fuer (i,j) gilt
 		// s[i][j] == Teilsumme i bis j == folge[i]+folge[i+1]+...+folge[j]
 		for (int i = 0; i < folge.length; i++)
 			for (int j = 0; j < folge.length; j++) {
@@ -20,7 +20,7 @@ public class MaxTeilsumme2 {
 		}
 		
 		// Teilsummen 0 bis 1, ..., 0 bis n-1
-		// auf die vorherige Teilsumme wird das n??chste Element addiert
+		// auf die vorherige Teilsumme wird das naechste Element addiert
 		for (int von = 1; von < folge.length; von++) {
 			for (int bis = von; bis < folge.length; bis++) {
 				s[von][bis] = s[von - 1][bis] - folge[von - 1];
@@ -28,9 +28,9 @@ public class MaxTeilsumme2 {
 			}
 		}
 		
-		// Teilsumme f??ngt um ein Element nach rechts an: um dieses Element
+		// Teilsumme faengt um ein Element nach rechts an: um dieses Element
 		// kleiner
-		// Tabelle s wurde gef??llt; jetzt kann das maximale Element gesucht
+		// Tabelle s wurde gefaellt; jetzt kann das maximale Element gesucht
 		// werden:
 		for (int von = 0; von < folge.length; von++) {
 			for (int bis = 0; bis < folge.length; bis++) {
@@ -39,7 +39,7 @@ public class MaxTeilsumme2 {
 					Benchmark.getInstance().index1(von);
 					Benchmark.getInstance().index2(bis);
 				}
-				max = Math.max(max, s[von][bis]); // Summe ??berpr??fen, ob gr????er
+				max = Math.max(max, s[von][bis]); // Summe ueberpruefen, ob graeaeer
 			}
 		}
 		if (folge.length == 0)
@@ -51,7 +51,7 @@ public class MaxTeilsumme2 {
 	int algorithmusPure(final int[] folge) {
 		
 		int[][] s = new int[folge.length][folge.length];
-		// Tabelle f??r Teilsummen: f??r (i,j) gilt
+		// Tabelle faer Teilsummen: faer (i,j) gilt
 		// s[i][j] == Teilsumme i bis j == folge[i]+folge[i+1]+...+folge[j]
 		for (int i = 0; i < folge.length; i++)
 			for (int j = 0; j < folge.length; j++) {
@@ -65,20 +65,20 @@ public class MaxTeilsumme2 {
 		}
 		
 		// Teilsummen 0 bis 1, ..., 0 bis n-1
-		// auf die vorherige Teilsumme wird das n??chste Element addiert
+		// auf die vorherige Teilsumme wird das naechste Element addiert
 		for (int von = 1; von < folge.length; von++) {
 			for (int bis = von; bis < folge.length; bis++) {
 				s[von][bis] = s[von - 1][bis] - folge[von - 1];
 			}
 		}
 		
-		// Teilsumme f??ngt um ein Element nach rechts an: um dieses Element
+		// Teilsumme faengt um ein Element nach rechts an: um dieses Element
 		// kleiner
-		// Tabelle s wurde gef??llt; jetzt kann das maximale Element gesucht
+		// Tabelle s wurde gefaellt; jetzt kann das maximale Element gesucht
 		// werden:
 		for (int von = 0; von < folge.length; von++) {
 			for (int bis = 0; bis < folge.length; bis++) {
-				max = Math.max(max, s[von][bis]); // Summe ??berpr??fen, ob gr????er
+				max = Math.max(max, s[von][bis]); // Summe ueberpraefen, ob groesser
 			}
 		}
 		if (folge.length == 0)

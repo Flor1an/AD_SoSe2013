@@ -19,12 +19,13 @@ public class TestAlgorithmus {
         // generiere Tape 0
         GenerateTape gt = new GenerateTape();
         //gt.exampleTape(0);
-        gt.randomTape(0);
+        gt.randomTape(0,1000);
 
-        // starte den Zossen
-        System.out.println(alg.toString());
+        // starte
+        System.out.println(alg); //Unsortierte Bänder ausgeben (vor dem Sortier Algorithmus)
         alg.debug(false);
-        alg.sort(3);
-        System.err.println(alg.toString());
+        alg.sort(3); //mit initialer RunLänge
+        System.err.println(alg); //Sortierte Bänder ausgeben (nach dem Sortier Algorithmus)
+
     }
 }
