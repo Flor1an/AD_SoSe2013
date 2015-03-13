@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /**
- * @author micha severin, florian kletz 
+ * 
  *
  */
 public class FileSystem {
