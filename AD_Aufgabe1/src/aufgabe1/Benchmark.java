@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 /**
- * @author micha severin, florian kletz 
+ * 
  *
  */
 public class Benchmark {
