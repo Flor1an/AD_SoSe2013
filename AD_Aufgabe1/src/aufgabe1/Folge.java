@@ -3,7 +3,7 @@ package aufgabe1;
 import java.util.Random;
 
 /**
- * @author micha severin, florian kletz 
+ * 
  *
  */
 public class Folge {
